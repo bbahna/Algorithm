@@ -1,4 +1,4 @@
-## Javascript learned
+## Algorithm study
 - update 예정 :)
 
 1. [enter 입문](/enter/README.md)

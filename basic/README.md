@@ -1,2 +1,2 @@
-## Javascript learned
+## Algorithm study
 - basic 기초

@@ -1,2 +1,2 @@
-## Javascript learned
+## Algorithm study
 - enter 입문

@@ -1,2 +1,2 @@
-## Javascript learned
+## Algorithm study
 - medium 중급

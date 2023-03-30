@@ -62,3 +62,65 @@
         return answer;
     }
     ```
+
+### Day 3 사칙연산, 배열, 수학
+9. 나머지 구하기
+    ```
+    function solution(num1, num2) {
+        const answer = num1%num2;
+        return answer;
+    }
+    ```
+10. 중앙값 구하기
+    ```
+    function solution(array) {
+        const sortArray = array.sort((a, b) =>{
+            return a - b;
+        })
+
+        const answer = sortArray[Math.floor(array.length / 2)];
+        return answer;
+    }
+    ```
+11. 최빈값 구하기
+    ```
+
+    ```
+12. 짝수는 싫어요
+    ```
+    function solution(n) {
+        let even = (n % 2 == 1) ? Math.floor(n/2 + 1) : n/2;
+
+        const answer = Array(even).fill().map((v,i) => 2 * i + 1);
+        return answer;
+    }
+    ```
+
+### Day 4 수학, 배열
+13. 피자 나눠 먹기 (1)
+    ```
+    function solution(n) {
+        const answer = Math.ceil(n/7);
+        return answer;
+    }
+    ```
+14. 피자 나눠 먹기 (2)
+    ```
+
+    ```
+15. 피자 나눠 먹기 (3)
+    ```
+    function solution(slice, n) {
+        const answer = Math.ceil(n / slice);
+        return answer;
+    }
+    ```
+16. 배열의 평균값
+    ```
+    function solution(numbers) {
+        const numberSum = numbers.reduce((a,b) => (a+b));
+
+        const answer = numberSum/numbers.length
+        return answer;
+    }
+    ```

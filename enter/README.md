@@ -1,5 +1,5 @@
 # Algorithm study
-## enter 입문(100문제): [JavaScript, Lv.0](https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&languages=javascript)
+## enter 입문(100문제): [programmers, Lv.0](https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&languages=javascript)
 
 ### Day 1 사칙연산
 1. 두 수의 합

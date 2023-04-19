@@ -1,31 +1,7 @@
 # Algorithm study
 ## kit 고득점 - [programmers, 코딩테스트 자주 나오는 유형](https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit)(10유형)
 
-### 1. 해시
-`Key-value쌍으로 데이터를 빠르게 찾아보세요.`
-> 출제빈도: 높음
->
-> 평균점수: 보통
->
-> 문제세트: 0 / 5
-
-### 2. 스택/큐
-`LIFO, FIFO, push & pop! 스택과 큐를 이용해서 문제를 풀어보세요.`
-> 출제빈도: 보통
->
-> 평균점수: 높음
->
-> 문제세트: 0 / 6
-
-### 3. 힙(Heap)
-`힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.`
-> 출제빈도: 보통
->
-> 평균점수: 높음
->
-> 문제세트: 0 / 3
-
-### 4. 정렬
+### 1. 정렬
 `정렬을 이용해서 문제를 효율적으로 풀어보세요.`
 > 출제빈도: 높음
 >
@@ -33,7 +9,81 @@
 >
 > 문제세트: 0 / 3
 
-### 5. 완전탐색
+* K번째수(Lv.1) _230418
+  ```
+  function solution(array, commands) {
+    let answer = [];
+
+    for(let i=0; i < commands.length; i++) {
+      const splicedArray = array.slice(commands[i][0] - 1, commands[i][1]);
+
+      const sortedArray = splicedArray.sort((a, b) => a - b);
+
+      answer.push(sortedArray[commands[i][2] - 1]);
+    }
+
+    return answer;
+  }
+  ```
+
+* 가장 큰 수(Lv.2) _230419
+  ```
+
+  ```
+
+* H-Index(Lv.2) _230419
+  ```
+
+  ```
+
+### 2. 해시
+`Key-value쌍으로 데이터를 빠르게 찾아보세요.`
+> 출제빈도: 높음
+>
+> 평균점수: 보통
+>
+> 문제세트: 0 / 5
+
+* 폰켓몬(Lv. 1) _230419
+  ```
+  function solution(nums) {
+    const 잡을수있음 = nums.length/2;
+    const 중복값제거 = [...new Set(nums)].length;
+    
+    return 잡을수있음 < 중복값제거 ? 잡을수있음 : 중복값제거;
+  }
+  ```
+ 
+* 완주하지 못한 선수(Lv. 1) _230419(풀이참고)
+  ```
+  function solution(participant, completion) {
+    const participantSort = participant.sort();
+    const completionSort = completion.sort();
+    
+    for(let i = 0; i < participantSort.length; i++) {
+      if (participantSort[i] !== completion[i]) {
+          return participantSort[i]
+      }
+    }
+  }
+  ```
+-----
+* 전화번호 목록(Lv. 2)
+  ```
+
+  ```
+ 
+* 위장(Lv. 2)
+  ```
+
+  ```
+
+* 베스트앨범(Lv. 3)
+  ```
+
+  ```
+
+### 3. 완전탐색
 `무식해 보여도 사실은 최고의 방법일 때가 있지요.`
 > 출제빈도: 높음
 >
@@ -41,7 +91,66 @@
 >
 > 문제세트: 0 / 7
 
-### 6. 탐욕법(Greedy)
+* 최소직사각형(lv.1)
+  ```
+
+  ```
+  
+* 모의고사(lv.1)
+  ```
+
+  ```
+-----
+* 소수 찾기(lv.2)
+  ```
+
+  ```
+  
+* 카펫(lv.2)
+  ```
+
+  ```
+  
+* 피로도(lv.2)
+  ```
+
+  ```
+  
+* 전력망을 둘로 나누기(lv.2)
+  ```
+
+  ```
+  
+* 모음사전(lv.2)
+  ```
+
+  ```
+
+### 4. 깊이/너비 우선 탐색(DFS/BFS)
+`깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.`
+> 출제빈도: 높음
+>
+> 평균점수: 낮음
+>
+> 문제세트: 0 / 7
+
+### 5. 스택/큐
+`LIFO, FIFO, push & pop! 스택과 큐를 이용해서 문제를 풀어보세요.`
+> 출제빈도: 보통
+>
+> 평균점수: 높음
+>
+> 문제세트: 0 / 6
+
+### 6. 힙(Heap)
+`힙은 특정한 규칙을 가지는 트리로, 힙을 이용해서 우선순위 큐를 구현할 수 있습니다.`
+> 출제빈도: 보통
+>
+> 평균점수: 높음
+>
+> 문제세트: 0 / 3
+
+### 7. 탐욕법(Greedy)
 `부분적인 최적해가 전체적인 최적해가 되는 마법!`
 > 출제빈도: 낮음
 >
@@ -49,21 +158,13 @@
 >
 > 문제세트: 0 / 6
 
-### 7. 동적계획법(Dynamic Programming)
+### 8. 동적계획법(Dynamic Programming)
 `불필요한 계산을 줄이고, 효율적으로 최적해를 찾아야만 풀리는 문제들입니다.`
 > 출제빈도: 낮음
 >
 > 평균점수: 낮음
 >
 > 문제세트: 0 / 5
-
-### 8. 깊이/너비 우선 탐색(DFS/BFS)
-`깊이/너비 우선 탐색을 사용해 원하는 답을 찾아보세요.`
-> 출제빈도: 높음
->
-> 평균점수: 낮음
->
-> 문제세트: 0 / 7
 
 ### 9. 이분탐색
 `이분탐색 기법을 이용해 효율적으로 값을 찾아보세요`
